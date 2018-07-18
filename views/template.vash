@@ -1,0 +1,84 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@model.title</title>
+	
+	<link href="assets/bootstrap.min.css" type="text/css" rel="stylesheet" /> 
+	<link href="assets/fonts.css" type="text/css" rel="stylesheet" />
+	<link href="assets/font-awesome.css" type="text/css" rel="stylesheet" />
+	<link href="assets/jquery-ui.theme.css" rel="stylesheet" type="text/css" /> 
+	<link href="assets/magnific-popup.css" rel="stylesheet" type="text/css">    
+	<link href="assets/summer-trip2018.css?v=1.1" rel="stylesheet" type="text/css">
+	<!--[if IE 8]><link media="all" rel="stylesheet" href="assets/ie.css"><![endif]-->		
+	<!--[if IE]><script src="assets/ie.js"></script><![endif]-->
+    <script type="text/javascript" src="assets/jquery-jafra.js"></script>
+    <script type="text/javascript" src="assets/jquery-ui.min.js"></script> 
+	<script type="text/javascript" src="assets/jquery.alphanum.js"></script>
+	<script type="text/javascript" src="assets/jquery.number.js"></script>
+	<script type="text/javascript" src="assets/magnificPopup.js"></script>
+	<script type="text/javascript" src="assets/summerTrip-constants.js"></script>
+	@html.block('script')
+		
+	@html.block('js')
+		
+</head>
+
+
+<body>	
+	
+	
+	
+    <div id="wrapper">
+        <header id="header" class="style01">
+            <div class="holder">
+                <div class="col-md-6 col-xs-6">
+					<a id="jafra-logo" href="#"><img src="/assets/logo03.png" alt="JAFRA" width="125" height="41"></a>
+				</div>
+				<div class="col-md-6 col-xs-6 txt-right btn-royalty-content">
+					<a id="jafra-royalty" href="http://jafraroyalty.com/" class="btn-royalty" data-localize="summer.activity.btnRoyalty">RETURN TO JAFRAROYALTY.COM</a>
+				</div>
+				<div style="clear:both;"></div>
+            </div>
+        </header>
+		<div id="summer-errors" class="summer-errors"></div>
+        <main id="main" class="summer-content">
+			
+			@html.block('body')
+
+        </main>
+		
+		
+        <section class="support-block">
+            <div class="holder">
+                <span style="color:#ffffff">
+                    <span data-localize="footer.custserv">Customer Relationships</span>
+                    <a href="tel:+18008523728" class="tel-link">1-800-852-3728</a>
+                    <span data-localize="footer.hours">Hours available Mon-Fri 9:00-6:00 PST</span>.
+                </span>
+            </div>
+        </section>
+        <footer id="footer">
+            <div class="holder">
+				<nav class="footer-nav">
+					<ul class="disclaimer">
+						<li><a id="termslink" href="http://mf.jafrausa.com/PDF/Terms.pdf" target="_blank" data-localize="footer.terms">Terms</a></li>
+						<li><a id="privacylink" href="http://mf.jafrausa.com/PDF/Privacy.pdf" target="_blank" data-localize="footer.privacy">Privacy</a></li>
+						<li><a href="Ñ" data-localize="footer.dsa">DSA</a>
+						<ul class="subnav">
+							<li><a id="dsa" target="_blank" href="http://www.dsa.org/" data-localize="footer.dsa">DSA</a></li>
+							<li><a id="dsaEthics" target="_blank"  href="http://www.dsa.org/consumerprotection/code-of-ethics" data-localize="footer.dsaEthics">DSA Code of Ethics</a></li>
+						</ul>
+						</li>
+					</ul>
+				</nav>
+                <span class="copyright">
+                    &copy; @model.year - <a href="/"><span data-localize="footer.company">Jafra Cosmetics International</span></a>
+                    - <span data-localize="footer.rights">All Rights Reserved</span>
+                </span>
+            </div>
+        </footer>
+    </div>
+
+</body>
+</html>

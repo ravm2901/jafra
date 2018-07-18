@@ -1,0 +1,86 @@
+@html.extend('template', function(model){
+		
+	@html.block('script', function(model){
+		<script type="text/javascript" src="assets/summerCentralDistrict.UI.js"></script>
+	});
+
+
+	@html.block('js', function(model){
+
+		<script type="text/javascript">
+			var json = [],
+			d = new Date(),
+			curr_month = d.getMonth();
+	
+		
+			$(window).ready(function() {
+				
+				CONSTANTS = $.CONSTANTS();
+				
+				
+				UI_central = $.UI_CentralDis();
+				UI_central.init();
+				
+				
+			});
+		</script>
+
+	});
+
+
+
+	@html.block('body', function(model){
+	
+		<div class="summer-subcontent">
+			<div class="row summer-titles-content">
+				<div class="col-md-12 summer-title" data-localize="summer.activity.title">
+					Summer Trip 2018
+				</div>
+				
+				<div class="col-md-12 summer-sponsor-subtitle" data-localize="summer.central.title">
+					Central District Sponsoring
+				</div>
+			</div>
+			
+			
+			
+			
+			<div class="row">
+				<div class="col-md-12">
+					
+					<table id="summer-sponsor" class="summer-central">
+						<thead>
+							<tr>
+								<th data-localize="summer.central.tleaderID">Leader ID</th>
+								<th data-localize="summer.central.tname">Name</th>
+								<th data-localize="summer.central.tphone">Phone #</th>
+								<th data-localize="summer.central.temail">Email</th>
+								<th data-localize="summer.central.tNewConsSponCB">New Cons Sponsored in Central Branch</th>
+								<th data-localize="summer.central.tBBinCB">Business Builders in Central Branch</th>
+							</tr>
+						</thead>
+						<tbody>
+						</tbody>
+					</table>
+				</div>
+				
+			</div>
+			
+			<div class="row">
+				<div class="col-md-12 txt-right">
+					<a id="btn-return" href="#" class="btn-common btn-details" data-localize="summer.activityDeta.return">Back</a>
+				</div>
+			</div>
+			
+		</div>
+		
+    });
+
+});
+		
+	
+	
+		
+
+			
+        

@@ -1,0 +1,238 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAFRA :: Summer Trip</title>
+	
+	<link href="css/bootstrap.min.css" type="text/css" rel="stylesheet" /> 
+	<link href="css/fonts.css" type="text/css" rel="stylesheet" />
+	<link href="css/font-awesome.css" type="text/css" rel="stylesheet" />
+	<link href="css/jquery-ui.theme.css" rel="stylesheet" type="text/css" /> 
+	<link href="css/magnific-popup.css" rel="stylesheet" type="text/css">    
+	<link href="css/summer-trip2018.css?v=1.0" rel="stylesheet" type="text/css">
+	<!--[if IE 8]><link media="all" rel="stylesheet" href="css/ie.css"><![endif]-->		
+	<!--[if IE]><script src="js/ie.js"></script><![endif]-->
+    <script type="text/javascript" src="js/jquery-jafra.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script> 
+	<script type="text/javascript" src="js/jquery.alphanum.js"></script>
+	<script type="text/javascript" src="js/magnificPopup.js"></script>
+	<script type="text/javascript" src="js/summerTrip-constants.js"></script>
+	<script type="text/javascript" src="js/summerActivityAMB.UI.js"></script>
+	
+	<script>
+		
+	
+		var json = [],
+			d = new Date(),
+			curr_month = d.getMonth();
+	
+	
+		$(window).ready(function() {
+			
+			CONSTANTS = $.CONSTANTS();
+			
+			
+			UI_ActivityAMB = $.UI_AMB_Activity();
+			UI_ActivityAMB.init();
+			
+			
+		});
+		
+		
+	</script>
+	
+</head>
+
+
+<body>	
+	
+	
+	
+    <div id="wrapper">
+        <header id="header" class="style01">
+            <div class="holder">
+                <div class="col-md-6 col-xs-6">
+					<a id="jafra-logo" href="#"><img src="images/logo03.png" alt="JAFRA" width="125" height="41"></a>
+				</div>
+				<div class="col-md-6 col-xs-6 txt-right btn-royalty-content">
+					<a id="jafra-royalty" href="http://jafraroyalty.com/" class="btn-royalty" data-localize="summer.activity.btnRoyalty">RETURN TO JAFRAROYALTY.COM</a>
+				</div>
+				<div style="clear:both;"></div>
+            </div>
+        </header>
+		<div id="summer-errors" class="summer-errors"></div>
+        <main id="main" class="summer-content">
+			<div class="summer-subcontent">
+				<div class="row summer-titles-content">
+					<div class="col-md-6 summer-title" data-localize="summer.activity.title">
+						Summer Trip 2018
+					</div>
+					
+					<div class="col-md-6 summer-subtitle" data-localize="summer.activity.subtitle">
+						Activity as of: December 1, 2017
+					</div>
+				</div>
+				
+				
+				<div class="row">
+					<div class="col-md-12">
+						<table class="consultant-info">
+							<tr>
+								<td data-localize="summer.activity.consId">Consultant ID:</td>
+								<td id="consID"></td>
+								<td data-localize="summer.activity.qtitle">January 1, 2017 Title (Qualifying Title):</td>
+								<td id="janTitle"></td>
+							</tr>
+							<tr>
+								<td data-localize="summer.activity.consName">Consultant Name:</td>
+								<td id="name"></td>
+								<td data-localize="summer.activity.currTitle">Current Title:</td>
+								<td id="currentTitle"></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+								<td data-localize="summer.activity.tripLevAch">Trip Level Achieved:</td>
+								<td id="tripLevelAchieved"></td>
+							</tr>
+							<tr id="ambLabelDataHead">
+								<td></td>
+								<td></td>
+								<td data-localize="summer.activity.ambLevAch">AMB Level Achieved:</td>
+								<td id="ambLevelAchievedHead"></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				
+				
+				<div class="row">
+					<div class="col-md-12">
+						<div class="summer-activity-title txt-center" data-localize="summer.amb.earnSummerTrip">Ambassadors Earn Summer Trip!</div>
+						<table class="summer-amb-tearn">
+						<thead>
+							<tr>
+								<th data-localize="summer.amb.achieveTotalGoals">Achieve Total District Goals</th>
+								<th data-localize="summer.amb.earn">Earn</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td data-localize="summer.amb.level1">Level 1</td>
+								<td data-localize="summer.amb.level1Price">All Inclusive Trip for Self</td>
+							</tr>
+							<tr>
+								<td data-localize="summer.amb.level2">Level 2</td>
+								<td data-localize="summer.amb.level2Price">All inclusive Trip for Self & Guest</td>
+							</tr>
+						</tbody>
+						</table>
+					</div>
+				</div>
+				
+				
+				<div class="row">
+					<div class="col-md-12 summer-amb-div">
+						<div class="summer-activity-title txt-center" data-localize="summer.amb.personalActi">Personal Activity</div>
+						<table id="summer-amb-personalActi" class="summer-amb-personalActi">
+						<thead>
+							<tr>
+								<th data-localize="summer.amb.newConsPerSpon">New Consultants Personally Sponsored Jan 1 - May 31</th>
+								<th data-localize="summer.amb.businessBuilder">Business Builder Consultants</th>
+							</tr>
+						</thead>
+						<tbody>
+						</tbody>
+						</table>
+					</div>
+				</div>
+				
+				
+				<div class="row">
+					<div class="col-md-12">
+						<div class="txt-center"><span class="summer-activity-title" data-localize="summer.amb.totDisActi">Total District Activity (for Ambassadors)</span> <a id="btn-details" href="#" class="btn-common btn-details" data-localize="summer.activity.details">Details</a></div>
+						<table class="summer-amb-tTotalDistrict">
+						<tbody>
+							<tr>
+								<td rowspan="3" class="summer-amb-tTotalDistrictHead"><span data-localize="summer.amb.totDistrict">Total District</span><br /><span data-localize="summer.amb.numBB"># of Business Builders *</span></td>
+								<td colspan="2" class="summer-amb-tTotalDistrictHead" data-localize="summer.amb.goals">Goals</td>
+							</tr>
+							<tr>
+								<td class="summer-amb-tTotalDistrictHead" data-localize="summer.amb.level1">Level 1</td>
+								<td class="summer-amb-tTotalDistrictHead" data-localize="summer.amb.level2">Level 2</td>
+							</tr>
+							<tr>
+								<td><span id="aLevel1"></span></td>
+								<td><span id="aLevel2"></span></td>
+							</tr>
+						</tbody>
+						</table>
+					</div>
+				</div>
+				
+				
+				<div class="row">
+					<div class="col-md-12">
+						<table id="summer-amb-tNewCons" class="summer-amb-tNewCons">
+						<thead>
+							<tr>
+								<th data-localize="summer.amb.newConsSponJanMay">New Consultants Sponsored Jan 1 - May 31</th>
+								<th data-localize="summer.amb.BB">Business Builder</th>
+							</tr>
+						</thead>
+						<tbody>
+						</tbody>
+						</table>
+						<div class="summer-amb-note" data-localize="summer.amb.note">
+							* For this promotion a Business Builder is a Consultant who is sponsored between January and April 2018 who achieves $1,500 in Cumulative Paid Retail Sales by June 30, 2018. New Consultants sponsored in May need to achive $1,000 in Cumulative Paid Retail Sales by June 30, 2018.
+						</div>
+					</div>
+				</div>
+				
+				
+				<div class="row summer-amb-btns">
+					<div class="col-md-6">
+						<a id="btnAmbBoard" href="#" class="btn-board" data-localize="summer.amb.btnAmb">Ambassador Leader Board</a>
+					</div>
+					<div class="col-md-6 txt-right">
+						<a id="btn-return" href="#" class="btn-common btn-details" data-localize="summer.activityDeta.return">Back</a>
+					</div>
+				</div>
+				
+			</div>
+        </main>
+		
+		
+        <section class="support-block">
+            <div class="holder">
+                <span style="color:#ffffff">
+                    <span data-localize="footer.custserv">Customer Relationships</span>
+                    <a href="tel:+18008523728" class="tel-link">1-800-852-3728</a>
+                    <span data-localize="footer.hours">Hours available Mon-Fri 9:00-6:00 PST</span>.
+                </span>
+            </div>
+        </section>
+        <footer id="footer">
+            <div class="holder">
+				<nav class="footer-nav">
+					<ul class="disclaimer">
+						<li><a id="termslink" href="http://mf.jafrausa.com/PDF/Terms.pdf" target="_blank" data-localize="footer.terms">Terms</a></li>
+						<li><a id="privacylink" href="http://mf.jafrausa.com/PDF/Privacy.pdf" target="_blank" data-localize="footer.privacy">Privacy</a></li>
+						<li><a href="Ñ" data-localize="footer.dsa">DSA</a>
+						<ul class="subnav">
+							<li><a id="dsa" target="_blank" href="http://www.dsa.org/" data-localize="footer.dsa">DSA</a></li>
+							<li><a id="dsaEthics" target="_blank"  href="http://www.dsa.org/consumerprotection/code-of-ethics" data-localize="footer.dsaEthics">DSA Code of Ethics</a></li>
+						</ul>
+						</li>
+					</ul>
+				</nav>
+                <span class="copyright">
+                    &copy; 2014 - <a href="/"><span data-localize="footer.company">Jafra Cosmetics International</span></a>
+                    - <span data-localize="footer.rights">All Rights Reserved</span>
+                </span>
+            </div>
+        </footer>
+    </div>
+
+</body>
+</html>

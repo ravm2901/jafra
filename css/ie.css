@@ -1,0 +1,139 @@
+body{
+	min-width: 1110px;
+}
+#header{
+	min-width: 1025px;
+}
+img{
+	max-width: none !important;
+	width: 100%;
+}
+.fancybox-overlay{
+	background: url(../images/bg-overlay.png) !important;
+}
+.fancybox-wrap .fancybox-inner{
+	width: 600px !important;
+}
+.nav-drop > ul > li{
+	margin-left: 0;
+}
+.nav-drop > ul > li.has-drop-down > a:after{
+	border-width: 4px 4px 0 3px;
+}
+.bigpicture-box{
+	padding: 0 10px;
+}
+.title-line > span{
+	margin: 0;
+}
+.earnings-box .earnings-breakdown .see-more:after{
+	background: url(../images/sprite.png) no-repeat -60px -28px;
+	width: 16px;
+	height: 9px;
+	border-style: none;
+	margin-top: 6px;
+}
+.earnings-box .earnings-breakdown .see-more:hover:after{
+	background-position: -86px -28px;
+}
+.earnings-box .opener:after{
+	background: url(../images/sprite.png) no-repeat 0 -28px;
+	width: 20px;
+	height: 12px;
+	border-style: none;
+	top: 10px;
+}
+.earnings-box .opener:hover:after{
+	background-position: -30px -28px;
+}
+.earnings-box .open-close.active .opener:after{
+	top: 10px;
+}
+.earnings-box .open-close.active .opener:after{
+	background-position: 0 -45px;
+}
+.earnings-box .open-close.active .opener:hover:after{
+	background-position: -30px -45px;
+}
+.earnings-box .open-close .jcf-scrollbar-vertical .jcf-scrollbar-dec,
+.earnings-box .open-close .jcf-scrollbar-vertical .jcf-scrollbar-inc,
+.earnings-box .open-close .jcf-scrollbar-vertical .jcf-scrollbar-dec.jcf-inactive,
+.earnings-box .open-close .jcf-scrollbar-vertical .jcf-scrollbar-inc.jcf-inactive{
+	background: url(../images/sprite.png) no-repeat -60px -45px;
+	width: 21px;
+	height: 13px;
+	border-style: none;	
+}
+.earnings-box .open-close .jcf-scrollbar-vertical .jcf-scrollbar-dec{
+	background-position: -86px -45px;
+}
+.earnings-box .open-close .jcf-scrollbar-vertical .jcf-scrollbar-dec.jcf-inactive{
+	background-position: 0 -45px;
+}
+.earnings-box .open-close .jcf-scrollbar-vertical .jcf-scrollbar-inc.jcf-inactive{
+	background-position: 0 -28px;
+}
+.more:after{
+	background: url(../images/sprite.png) no-repeat -93px 0;
+	width: 18px;
+	height: 9px;
+	border-style: none;
+	top: 2px;
+}
+.more:hover:after{
+	background-position: -116px 0;
+}
+.info-holder.compatible .popup{
+	left: auto;
+	right: -40px;
+}
+.infocircles-box .info-holder.compatible .popup:before{
+	margin: 0 30px 0 0;
+	left: auto;
+	right: 0;
+}
+.activitydiagram-box .recent .info-holder .popup{
+	left: auto;
+	right: -56px;
+}
+.activitydiagram-box .recent .info-holder .popup:before{
+	margin: 0 53px 0 0;
+	right: 0;
+	left: auto;
+}
+.login-form input[type="text"],
+.login-form input[type="email"],
+.login-form input[type="password"] {
+	line-height: 60px;
+}
+
+
+.main-content-holder .beauty-block .rewards-holder .ico-holder img{
+	width: auto;
+}
+
+.main-content-holder .beauty-block .popup-holder .popup{
+	left: 0;
+	margin: 28px 0 0 -22px;
+	padding: 43px 10px 10px;
+	top: 100%;
+	width: 210px;
+}
+
+.main-content-holder .beauty-block .popup-holder .popup:before{
+	background: none;
+}
+.main-content-holder .beauty-block .popup-holder .icon-holder{
+	margin-left: -32px;
+}
+
+.main-content-holder .beauty-block .popup-holder .benefits-list li{
+	padding: 0 10px;
+}
+
+.main-content-holder .beauty-block .popup-holder .benefits-list li:before{
+	left: 2px;
+}
+.order-bar.style01 .heading{
+	min-width: 164px;
+}

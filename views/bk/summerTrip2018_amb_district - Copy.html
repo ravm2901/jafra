@@ -1,0 +1,140 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAFRA :: Summer Trip</title>
+	
+	<link href="css/bootstrap.min.css" type="text/css" rel="stylesheet" /> 
+	<link href="css/fonts.css" type="text/css" rel="stylesheet" />
+	<link href="css/font-awesome.css" type="text/css" rel="stylesheet" />
+	<link href="css/jquery-ui.theme.css" rel="stylesheet" type="text/css" />     
+	<link href="css/summer-trip2018.css?v=1.0" rel="stylesheet" type="text/css">
+	<!--[if IE 8]><link media="all" rel="stylesheet" href="css/ie.css"><![endif]-->		
+	<!--[if IE]><script src="js/ie.js"></script><![endif]-->
+    <script type="text/javascript" src="js/jquery-jafra.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script> 
+	<script type="text/javascript" src="js/jquery.alphanum.js"></script>
+	<script type="text/javascript" src="js/jquery.number.js"></script>
+	<script type="text/javascript" src="js/magnificPopup.js"></script>
+	<script type="text/javascript" src="js/summerTrip-constants.js"></script>
+	<script type="text/javascript" src="js/summerDistrictAMB.UI.js"></script>
+	
+	<script>
+		
+	
+	
+		var json = [],
+			d = new Date(),
+			curr_month = d.getMonth();
+	
+	
+		$(window).ready(function() {
+			
+			CONSTANTS = $.CONSTANTS();
+			
+			
+			UI_DistrictAMB = $.UI_DistrictAmb();
+			UI_DistrictAMB.init();
+			
+			
+		});
+		
+		
+	</script>
+	
+</head>
+
+
+<body>	
+	
+	
+	
+    <div id="wrapper">
+        <header id="header" class="style01">
+            <div class="holder">
+                <div class="col-md-6 col-xs-6">
+					<a id="jafra-logo" href="#"><img src="images/logo03.png" alt="JAFRA" width="125" height="41"></a>
+				</div>
+				<div class="col-md-6 col-xs-6 txt-right btn-royalty-content">
+					<a id="jafra-royalty" href="http://jafraroyalty.com/" class="btn-royalty" data-localize="summer.activity.btnRoyalty">RETURN TO JAFRAROYALTY.COM</a>
+				</div>
+				<div style="clear:both;"></div>
+            </div>
+        </header>
+		<div id="summer-errors" class="summer-errors"></div>
+        <main id="main" class="summer-content">
+			<div class="summer-subcontent">
+				<div class="row summer-titles-content">
+					<div class="col-md-12 summer-title" data-localize="summer.activity.title">
+						Summer Trip 2018
+					</div>
+					
+					<div class="col-md-12 summer-sponsor-subtitle" data-localize="summer.district.title">
+						Total District - Sponsoring Activity By Lineage Levels
+					</div>
+				</div>
+				
+				
+				
+				
+				<div class="row">
+					<div class="col-md-12">
+						
+						<table id="summer-district" class="summer-district">
+							<thead>
+								<tr>
+									<th data-localize="summer.district.tLineageLev">Lineage Level</th>
+									<th data-localize="summer.district.tNewCons">New Consultants Sponsored</th>
+									<th data-localize="summer.district.tBB">Business Builders</th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					</div>
+					
+				</div>
+				
+				<div class="row">
+					<div class="col-md-12 txt-right">
+						<a id="btn-return" href="#" class="btn-common btn-details" data-localize="summer.activityDeta.return">Back</a>
+					</div>
+				</div>
+				
+			</div>
+        </main>
+		
+		
+        <section class="support-block">
+            <div class="holder">
+                <span style="color:#ffffff">
+                    <span data-localize="footer.custserv">Customer Relationships</span>
+                    <a href="tel:+18008523728" class="tel-link">1-800-852-3728</a>
+                    <span data-localize="footer.hours">Hours available Mon-Fri 9:00-6:00 PST</span>.
+                </span>
+            </div>
+        </section>
+        <footer id="footer">
+            <div class="holder">
+				<nav class="footer-nav">
+					<ul class="disclaimer">
+						<li><a id="termslink" href="http://mf.jafrausa.com/PDF/Terms.pdf" target="_blank" data-localize="footer.terms">Terms</a></li>
+						<li><a id="privacylink" href="http://mf.jafrausa.com/PDF/Privacy.pdf" target="_blank" data-localize="footer.privacy">Privacy</a></li>
+						<li><a href="Ñ" data-localize="footer.dsa">DSA</a>
+						<ul class="subnav">
+							<li><a id="dsa" target="_blank" href="http://www.dsa.org/" data-localize="footer.dsa">DSA</a></li>
+							<li><a id="dsaEthics" target="_blank"  href="http://www.dsa.org/consumerprotection/code-of-ethics" data-localize="footer.dsaEthics">DSA Code of Ethics</a></li>
+						</ul>
+						</li>
+					</ul>
+				</nav>
+                <span class="copyright">
+                    &copy; 2014 - <a href="/"><span data-localize="footer.company">Jafra Cosmetics International</span></a>
+                    - <span data-localize="footer.rights">All Rights Reserved</span>
+                </span>
+            </div>
+        </footer>
+    </div>
+
+</body>
+</html>

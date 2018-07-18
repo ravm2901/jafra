@@ -1,0 +1,242 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAFRA :: Summer Trip</title>
+	
+	<link href="css/bootstrap.min.css" type="text/css" rel="stylesheet" /> 
+	<link href="css/fonts.css" type="text/css" rel="stylesheet" />
+	<link href="css/font-awesome.css" type="text/css" rel="stylesheet" />
+	<link href="css/jquery-ui.theme.css" rel="stylesheet" type="text/css" /> 
+	<link href="css/magnific-popup.css" rel="stylesheet" type="text/css">    
+	<link href="css/summer-trip2018.css?v=1.1" rel="stylesheet" type="text/css">
+	<!--[if IE 8]><link media="all" rel="stylesheet" href="css/ie.css"><![endif]-->		
+	<!--[if IE]><script src="js/ie.js"></script><![endif]-->
+    <script type="text/javascript" src="js/jquery-jafra.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script> 
+	<script type="text/javascript" src="js/jquery.alphanum.js"></script>
+	<script type="text/javascript" src="js/magnificPopup.js"></script>
+	<script type="text/javascript" src="js/summerTrip-constants.js"></script>
+	<script type="text/javascript" src="js/summerActivity.UI.js"></script>
+	
+	<script>
+		
+	
+		var json = [],
+			d = new Date(),
+			curr_month = d.getMonth();
+	
+	
+		$(window).ready(function() {
+			
+			CONSTANTS = $.CONSTANTS();
+			
+			
+			UI_Activity = $.UI_Activity();
+			UI_Activity.init();
+			
+			
+		});
+		
+		
+	</script>
+	
+</head>
+
+
+<body>	
+	
+	
+	
+    <div id="wrapper">
+        <header id="header" class="style01">
+            <div class="holder">
+                <div class="col-md-6 col-xs-6">
+					<a id="jafra-logo" href="#"><img src="images/logo03.png" alt="JAFRA" width="125" height="41"></a>
+				</div>
+				<div class="col-md-6 col-xs-6 txt-right btn-royalty-content">
+					<a id="jafra-royalty" href="http://jafraroyalty.com/" class="btn-royalty" data-localize="summer.activity.btnRoyalty">RETURN TO JAFRAROYALTY.COM</a>
+				</div>
+				<div style="clear:both;"></div>
+            </div>
+        </header>
+		<div id="summer-errors" class="summer-errors"></div>
+        <main id="main" class="summer-content">
+			<div class="summer-subcontent">
+				<div class="row summer-titles-content">
+					<div class="col-md-6 summer-title" data-localize="summer.activity.title">
+						Summer Trip 2018
+					</div>
+					
+					<div class="col-md-6 summer-subtitle" data-localize="summer.activity.subtitle">
+						Activity as of: December 1, 2017
+					</div>
+				</div>
+				
+				
+				<div class="row">
+					<div class="col-md-12">
+						<table class="consultant-info">
+							<tr>
+								<td data-localize="summer.activity.consId">Consultant ID:</td>
+								<td id="consID"></td>
+								<td data-localize="summer.activity.qtitle">January 1, 2017 Title (Qualifying Title):</td>
+								<td id="janTitle"></td>
+							</tr>
+							<tr>
+								<td data-localize="summer.activity.consName">Consultant Name:</td>
+								<td id="name"></td>
+								<td data-localize="summer.activity.currTitle">Current Title:</td>
+								<td id="currentTitle"></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+								<td data-localize="summer.activity.tripLevAch">Trip Level Achieved:</td>
+								<td id="tripLevelAchieved"></td>
+							</tr>
+							<tr id="ambLabelDataHead">
+								<td></td>
+								<td></td>
+								<td data-localize="summer.activity.ambLevAch">AMB Level Achieved:</td>
+								<td id="ambLevelAchievedHead"></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				
+				
+				<div class="row">
+					<div class="col-md-7">
+						<table id="summer-activity-tleft" class="summer-activity-tleft">
+						<thead>
+							<tr>
+								<th class="summer-title-level" data-localize="summer.activity.level">Level</th>
+								<th class="summer-title-points" data-localize="summer.activity.pointsNeeded">BB and Points Needed</th>
+								<!--th class="summer-title-gifts" data-localize="summer.activity.receiveGifts">Receive Gifts</th-->
+								<th class="summer-title-earn"><span data-localize="summer.activity.earn">Earn</span><br/><span data-localize="summer.activity.summerTrip">Summer Trip!</span></th>
+							</tr>
+						</thead>
+						<tbody>
+						</tbody>
+						</table>
+					</div>
+					
+					<div class="col-md-5">
+						<table class="summer-activity-tright">
+							<tr>
+								<td class="summer-tright-points summer-tright-bold" data-localize="summer.activity.pointsEarnedTrip">Points earned Trip To Date:</td>
+								<td id="pointsEarned" class="summer-tright-green"></td>
+							</tr>
+							<tr>
+								<td class="summer-tright-achieved" data-localize="summer.activity.achieved10BB">Achieved 10 Business Builders?</td>
+								<td id="achieved10BB" class="summer-tright-green"></td>
+							</tr>
+							<tr id="lessCon">
+								<td class="summer-tright-achieved" data-localize="summer.activity.achievedCDGrowth">Achieved CD Growth?</td>
+								<td id="achievedCDGrowth" class="summer-tright-green"></td>
+							</tr>
+							<tr>
+								<td class="summer-tright-trip summer-tright-bold" data-localize="summer.activity.tripLevelAchieved">Trip Level achieved</td>
+								<td id="points-tripLevelAchieved" class="summer-tright-red"></td>
+							</tr>
+							<tr id="ambLabelData">
+								<td class="summer-tright-trip" data-localize="summer.activity.ambLevelAchieved">AMB Level Achieved:</td>
+								<td id="ambLevelAchieved" class="summer-tright-red"></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				
+				
+				<div class="row summer-personal-spo">
+					<div class="col-md-7">
+						<div class="summer-activity-title" data-localize="summer.activity.personalSpon">Personal Sponsoring</div>
+						<table class="summer-activity-personal-tleft">
+						<thead>
+							<tr>
+								<th data-localize="summer.activity.personalSponThead1">New Consultants Personally Sponsored Dec 1 - May 31</th>
+								<th data-localize="summer.activity.personalSponThead2">New Consultants with $500 on 1st or 2nd month</th>
+								<th data-localize="summer.activity.personalSponThead3">Businness Builder Consultants</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><span id="newConsSpon"></span></td>
+								<td><span id="newCons500"></span></td>
+								<td><span id="businessBuilder"></span></td>
+							</tr>
+							
+						</tbody>
+						</table>
+					</div>
+					
+					<div class="col-md-5">
+						<table id="summer-activity-personal-tright" border="0px" class="summer-activity-personal-tright">
+							<thead>
+								<tr>
+									<th data-localize="summer.activity.earnPoints">Activities to Earn Points</th>
+									<th data-localize="summer.activity.points">Points</th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-md-6">
+						<a id="btn-amb" href="#" class="btn-common btn-details" data-localize="summer.activity.btnAmb">AMB Leader Tracking</a>
+					</div>
+					<div class="col-md-6 txt-right">
+						<a id="btn-details" href="#" class="btn-common btn-details" data-localize="summer.activity.details">Details</a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 summer-note">
+						<div>
+							* <span class="summer-to-participate" data-localize="summer.activity.toParticipate">Minimum Requirements to participate:</span>
+						</div>
+						<div class="summer-requirements-content">
+							<span id="summer-requirements" class="summer-requirements" data-localize="summer.activity.requirements"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+        </main>
+		
+		
+        <section class="support-block">
+            <div class="holder">
+                <span style="color:#ffffff">
+                    <span data-localize="footer.custserv">Customer Relationships</span>
+                    <a href="tel:+18008523728" class="tel-link">1-800-852-3728</a>
+                    <span data-localize="footer.hours">Hours available Mon-Fri 9:00-6:00 PST</span>.
+                </span>
+            </div>
+        </section>
+        <footer id="footer">
+            <div class="holder">
+				<nav class="footer-nav">
+					<ul class="disclaimer">
+						<li><a id="termslink" href="http://mf.jafrausa.com/PDF/Terms.pdf" target="_blank" data-localize="footer.terms">Terms</a></li>
+						<li><a id="privacylink" href="http://mf.jafrausa.com/PDF/Privacy.pdf" target="_blank" data-localize="footer.privacy">Privacy</a></li>
+						<li><a href="Ñ" data-localize="footer.dsa">DSA</a>
+						<ul class="subnav">
+							<li><a id="dsa" target="_blank" href="http://www.dsa.org/" data-localize="footer.dsa">DSA</a></li>
+							<li><a id="dsaEthics" target="_blank"  href="http://www.dsa.org/consumerprotection/code-of-ethics" data-localize="footer.dsaEthics">DSA Code of Ethics</a></li>
+						</ul>
+						</li>
+					</ul>
+				</nav>
+                <span class="copyright">
+                    &copy; 2014 - <a href="/"><span data-localize="footer.company">Jafra Cosmetics International</span></a>
+                    - <span data-localize="footer.rights">All Rights Reserved</span>
+                </span>
+            </div>
+        </footer>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,278 @@
+.thermometer{
+    position:relative;
+    padding:0;
+    font-family:Arial, Helvetica, sans-serif;
+    color:#fff;
+    font-weight: bold;
+    opacity:1;
+}
+
+.therm-numbers{
+    width:40px;
+    float:left;
+    opacity:1;
+}
+
+.therm-number{
+    position:absolute;
+    text-align:right;
+    font-size:13px;
+	color:#333;
+}
+
+.therm-graphics{
+    float:left;
+    position:relative;
+    width:46px;
+}
+
+.therm-top{
+    position:absolute;
+    top:0;
+    left:7px;
+    
+    width:32px;
+    height:13px;
+}
+
+.therm-body-bg{
+     position:absolute;
+     top:13px;
+     left:7px;
+     width:32px;
+}
+
+.therm-body-mercury{
+     position:absolute;
+     bottom:51px;
+     left:14px;
+     width: 18px;
+     height:2px;
+}
+
+.therm-body-fore{
+     position:absolute;
+     width:24px;
+     top:13px;
+     left:11px;
+     background-repeat:repeat-y;
+}
+
+.therm-bottom{
+    position:absolute;
+    left:0;
+    width:46px;
+    height:51px;
+} 
+
+.therm-tooltip{
+    position:absolute;
+    left:38px;
+    width:200px;
+}
+
+.therm-tooltip .tip-left{
+    float:left;
+    width:19px;
+    height:32px;
+}
+
+.therm-tooltip .tip-middle{
+    float:left;
+    height:32px;
+    font-size:15px;
+}
+
+.therm-tooltip .tip-middle p{
+    position:relative;
+    margin:0;
+    padding-right:4px;
+    padding-left:3px;
+    top:6px;
+    height:32px;
+    opacity:.7;
+    background-size:64px 64px;
+    -moz-background-size: 100%;
+}
+
+.therm-tooltip .tip-right{
+    float:left;
+    width:9px;
+    height:32px;
+}
+
+
+.clear {
+    clear: both;
+}
+.txt-red{
+	color:#cd0606 !important;
+}
+/******************************* RVM *******************************/
+#logout{
+	color:#fff;
+}
+	#logout:hover, #logout:active, #logout:focus{
+		color:#fff;
+	}
+.jqplot-point-label{
+	font-weight:bold;
+}
+.header-user {
+    padding: 14px 0px;
+    text-align: right;
+    color: #fff;
+}
+.thermometer-content{
+	width:99%;
+	margin:20px auto;
+}
+	.thermometer-title{
+		font-family: HelveticaNeueLTStd-BdCn;
+		font-size:2.250em;
+		text-transform:uppercase;
+		font-weight: normal;
+		font-style: normal;
+		letter-spacing: 0.1em;
+		color: #867527;
+		padding-top:10px;
+		text-align:center;
+	}
+	.thermometer-subtitle {
+		font-family: DidotLTPro-Italic;
+		font-weight: normal;
+		font-style: normal;
+		font-size: 2.0em;
+		color: #460D66;
+		text-align: left;
+		margin-top:15px;
+		text-align:center;
+	}
+	.thermometer-subcontent{
+		margin:40px 0px;
+	}
+		.thermometer-subcontent .col-md-3{
+			width:30%;
+			float:none;
+			margin-left:auto;
+			margin-right:auto;
+		}
+		.thermometer-table-content{
+			overflow-x:auto;
+		}
+			.thermometer{
+			}
+			.thermometer-table{
+				width: 100%;
+				margin: 10px auto 30px auto;
+				border-spacing: 1px;
+				border-collapse: separate;
+				font-size: 0.857em;
+			}
+				.thermometer-info{
+					margin-top:25px;
+					text-align:justify;
+					color:#333;
+				}
+					.thermometer-info-no-margin{
+						margin-top:0px !important;
+					}
+				.thermometer-table th, .thermometer-table-td1{
+					background-color:rgb(99, 44, 134);
+					color:#fff !important;
+					text-align:center;
+					font-weight:100;
+					border-radius:3px;
+					padding:5px;
+					white-space:normal;
+				}
+					.thermo-current{
+						background-color:#4b0d72 !important;
+					}
+					.thermometer-table th:nth-child(1){
+						width:230px;
+						max-width:230px;
+					}
+				.thermometer-table td{
+					padding:4px 2px;
+					color:#000;
+					text-align:center;
+				}
+				.thermometer-table tr:nth-child(even){
+					background-color:#aaa;
+				}
+				.thermometer-table tr:nth-child(odd){
+
+				}
+				.sthermometer-table tr:last-child{
+					background-color:transparent;
+				}
+				.thermometer-table-total-row{
+					background-color:transparent !important;
+					font-weight:bold;
+				}
+				.thermometer-right{
+					text-align:right !important;
+					padding-right:10px;
+					font-weight:bold;
+				}
+		.thermometer-current{
+			color:#333;
+			margin-bottom:20px;
+		}
+			.current-balance{
+				display:block-inline;
+				background-color:#cd0606;
+				margin-right:0px;
+				margin-left:0px;
+				width:25%;
+				border-radius:3px;
+				border:0px solid rgb(99, 44, 134);
+				padding:5px 10px;
+				color:#fff;
+				font-size:0.857em;
+				text-align:center;
+				text-transform:uppercase;
+				font-weight: bold;
+			}
+			.current-month{
+				background-color:#cd0606;
+				color:#fff !important;
+			}
+			.thermometer-current{
+				color:#222;
+			}
+/************************* CHARTS ********************************/
+.thermo-chart-content{
+	padding:15px;
+}
+	.thermo-chart{
+		height:500px;
+		margin:20px auto;
+		text-align:center;
+		width:100%;
+	}
+#chart2 .jqplot-point-label {
+  color:#000;
+}
+		
+@media (min-width:1200px) {
+	.thermometer-content{
+		width:75%;
+	}
+		.thermometer-title{
+			text-align:left;
+		}
+		.thermometer-subtitle{
+			text-align:left;
+		}
+		.thermometer-subcontent .col-md-3{
+			width:25%;
+			float:left;
+		}
+		.thermometer-table th{
+			white-space:nowrap;
+			padding:4px 5px;
+		}
+	
+}

@@ -1,0 +1,83 @@
+@html.extend('template', function(model){
+		
+	@html.block('script', function(model){
+		<script type="text/javascript" src="assets/summerSponsors.UI.js"></script>
+	});
+
+
+	@html.block('js', function(model){
+
+		<script type="text/javascript">
+			var json   = [],
+			         d = new Date(),
+			curr_month = d.getMonth();
+	
+	
+			$(window).ready(function() {
+				
+				CONSTANTS = $.CONSTANTS();
+				
+				
+				UI_sponsors = $.UI_Sponsor();
+				UI_sponsors.init();
+				
+				
+			});
+		</script>
+
+	});
+
+
+
+	@html.block('body', function(model){
+	
+		<div class="summer-subcontent">
+			<div class="row summer-titles-content">
+				<div class="col-md-12 summer-title" data-localize="summer.activity.title">
+					Summer Trip 2018
+				</div>
+				
+				<div class="col-md-12 summer-sponsor-subtitle" data-localize="summer.sponsor.title">
+					Personal Activity - New Consultants Sponsored
+				</div>
+			</div>
+			
+			
+			
+			
+			<div class="row">
+				<div class="col-md-12">
+					
+					<table id="summer-sponsor" class="summer-sponsor">
+						<thead>
+							<tr>
+								<th></th>
+								<th data-localize="summer.sponsor.tconsId">Cons ID</th>
+								<th data-localize="summer.sponsor.tname">Name</th>
+								<th data-localize="summer.sponsor.tphone">Phone #</th>
+								<th data-localize="summer.sponsor.temail">Email</th>
+								<th data-localize="summer.sponsor.tstartDate">Start Date</th>
+								<th data-localize="summer.sponsor.tentryDate">Entry Date</th>
+								<th data-localize="summer.sponsor.tretailSales">Total Retail Sales</th>
+								<th data-localize="summer.sponsor.tBB">Achieved Business Builder</th>
+							</tr>
+						</thead>
+						<tbody>
+						</tbody>
+					</table>
+				</div>
+				
+			</div>
+			
+			<div class="row">
+				<div class="col-md-12 txt-right">
+					<a id="btn-return" href="#" class="btn-common btn-details" data-localize="summer.activityDeta.return">Back</a>
+				</div>
+			</div>
+			
+		</div>
+		
+    });
+
+});
+

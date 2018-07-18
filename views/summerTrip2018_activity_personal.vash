@@ -1,0 +1,164 @@
+@html.extend('template', function(model){
+		
+	@html.block('script', function(model){
+		<script type="text/javascript" src="assets/summerActiDeta.UI.js"></script>
+	});
+
+
+	@html.block('js', function(model){
+
+		<script type="text/javascript">
+			var   json = [],
+				     d = new Date(),
+			curr_month = d.getMonth();
+	
+	
+			$(window).ready(function() {
+				
+				CONSTANTS = $.CONSTANTS();
+				
+				
+				UI_Acti_Deta = $.UI_Acti_Deta();
+				UI_Acti_Deta.init();
+				
+				
+			});
+		</script>
+
+	});
+
+
+
+	@html.block('body', function(model){
+	
+		<div class="summer-subcontent">
+			<div class="row summer-titles-content">
+				<div class="col-md-6 summer-title" data-localize="summer.activity.title">
+					Summer Trip 2018
+				</div>
+				
+				<div class="col-md-6 summer-subtitle" data-localize="summer.activity.subtitle">
+					Activity as of: December 1, 2017
+				</div>
+			</div>
+			
+			
+			<div class="row">
+				<div class="col-md-12">
+					<table class="consultant-info">
+						<tr>
+							<td data-localize="summer.activity.consId">Consultant ID:</td>
+							<td id="consID"></td>
+							<td data-localize="summer.activityDeta.dateQ">December 1, 2017 Title (Qualifying Title):</td>
+							<td id="janTitle"></td>
+						</tr>
+						<tr>
+							<td data-localize="summer.activity.consName">Consultant Name:</td>
+							<td id="name"></td>
+							<td data-localize="summer.activity.currTitle">Current Title:</td>
+							<td id="currentTitle"></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td data-localize="summer.activity.tripLevAch">Trip Level Achieved:</td>
+							<td id="tripLevelAchieved"></td>
+						</tr>
+						<tr id="ambLabelDataHead">
+							<td></td>
+							<td></td>
+							<td data-localize="summer.activity.ambLevAch">AMB Level Achieved:</td>
+							<td id="ambLevelAchievedHead"></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-12">
+					
+					<table id="summer-activity2-personal" class="summer-activity2-personal">
+						<tbody>
+							<tr>
+								<td colspan="8"><div class="summer-title2" data-localize="summer.activityDeta.personalAct">Personal Activity</div></td>
+							</tr>
+							<tr class="summer-personal-activity-thead">
+								<td data-localize="summer.activityDeta.activity">Activity</td>
+								<td data-localize="summer.activityDeta.december">Dec</td>
+								<td data-localize="summer.activityDeta.january">Jan</td>
+								<td data-localize="summer.activityDeta.february">Feb</td>
+								<td data-localize="summer.activityDeta.march">Mar</td>
+								<td data-localize="summer.activityDeta.april">Apr</td>
+								<td data-localize="summer.activityDeta.may">May</td>
+								<td data-localize="summer.activityDeta.total">Total</td>
+							</tr>
+							<tr id="activity-PQNC" class="summer-personal-activity-body"></tr>
+							<tr id="activity-PBB" class="summer-personal-activity-body"></tr>
+							<tr id="activity-MPRS" class="summer-personal-activity-body"></tr>
+							<tr>
+								<td></td>
+								<td class="summer-personal-activity-tdiv" colspan="6"></td>
+								<td></td>
+							</tr>
+							<tr class="summer-personal-activity-thead">
+								<td data-localize="summer.activityDeta.pointsEarned">Points Earned</td>
+								<td data-localize="summer.activityDeta.december">Dec</td>
+								<td data-localize="summer.activityDeta.january">Jan</td>
+								<td data-localize="summer.activityDeta.february">Feb</td>
+								<td data-localize="summer.activityDeta.march">Mar</td>
+								<td data-localize="summer.activityDeta.april">Apr</td>
+								<td data-localize="summer.activityDeta.may">May</td>
+								<td data-localize="summer.activityDeta.total">Total</td>
+							</tr>
+							<tr id="pointsEarned-PQNC" class="summer-personal-activity-body"></tr>
+							<tr id="pointsEarned-PBB" class="summer-personal-activity-body"></tr>
+							<tr id="pointsEarned-MPRS" class="summer-personal-activity-body"></tr>
+							<tr id="pointsEarned-TP" class="summer-personal-activity-body summer-personal-activity-body-last"></tr>
+							<tr>
+								<td colspan="8" class="btn-cols-content">
+									<a id="btn-personal-details" href="#" class="btn-common btn-details" data-localize="summer.activity.details">Details</a>
+								</td>
+							</tr>
+							<tr  class="rowHideCON">
+								<td colspan="8" class="summer-personal-activity-tdiv2"></div>
+							</tr>
+							<tr class="rowHideCON">
+								<td colspan="8"><div class="summer-title2" data-localize="summer.activityDeta.centralDistrictSales">Central District Sales</div></td>
+							</tr>
+							<tr class="summer-personal-activity-thead rowHideCON">
+								<td></td>
+								<td data-localize="summer.activityDeta.december">Dec</td>
+								<td data-localize="summer.activityDeta.january">Jan</td>
+								<td data-localize="summer.activityDeta.february">Feb</td>
+								<td data-localize="summer.activityDeta.march">Mar</td>
+								<td data-localize="summer.activityDeta.april">Apr</td>
+								<td data-localize="summer.activityDeta.may">May</td>
+								<td data-localize="summer.activityDeta.total">Total</td>
+							</tr>
+							<tr id="centralDistrictSales-CDPRSG" class="summer-personal-activity-body rowHideCON"></tr>
+							<tr id="centralDistrictSales-AS" class="summer-personal-activity-body rowHideCON"></tr>
+							<tr id="centralDistrictSales-TGW" class="summer-personal-activity-body summer-personal-activity-body-last summer-personal-activity-body-blue rowHideCON"></tr>
+							<!--tr class="rowHideCON">
+								<td colspan="8" class="btn-cols-content">
+									<a id="btn-central-details" href="#" class="btn-common btn-details" data-localize="summer.activity.details">Details</a>
+								</td>
+							<tr-->
+						</tbody>
+					</table>
+				</div>
+				
+			</div>
+			
+			<div class="row">
+				<div class="col-md-12">
+					<a id="btn-return" href="#" class="btn-common btn-details" data-localize="summer.activityDeta.return">Back</a>
+				</div>
+			</div>
+			
+		</div>
+		
+    });
+
+});
+		
+	
