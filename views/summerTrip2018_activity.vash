@@ -32,7 +32,7 @@
 	@html.block('body', function(model){
 
 		<div class="summer-subcontent">
-			<!-- Example with Node - GitHub 2 -->
+			<!-- Example with Node - GitHub 2 test2 -->
 			<div class="row summer-titles-content">
 				<div class="col-md-6 summer-title" data-localize="summer.activity.title">
 					Summer Trip 2018
