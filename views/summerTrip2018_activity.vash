@@ -1,5 +1,5 @@
 @html.extend('template', function(model){
-		
+
 	@html.block('script', function(model){
 		<script type="text/javascript" src="assets/summerActivity.UI.js"></script>
 	});
@@ -11,17 +11,17 @@
 			var json = [],
 				d = new Date(),
 				curr_month = d.getMonth();
-		
-		
+
+
 			$(window).ready(function() {
-				
+
 				CONSTANTS = $.CONSTANTS();
-				
-				
+
+
 				UI_Activity = $.UI_Activity();
 				UI_Activity.init();
-				
-				
+
+
 			});
 		</script>
 
@@ -30,19 +30,20 @@
 
 
 	@html.block('body', function(model){
-	
+
 		<div class="summer-subcontent">
+			<!-- Example with Node -->
 			<div class="row summer-titles-content">
 				<div class="col-md-6 summer-title" data-localize="summer.activity.title">
 					Summer Trip 2018
 				</div>
-				
+
 				<div class="col-md-6 summer-subtitle" data-localize="summer.activity.subtitle">
 					Activity as of: December 1, 2017
 				</div>
 			</div>
-			
-			
+
+
 			<div class="row">
 				<div class="col-md-12">
 					<table class="consultant-info">
@@ -73,8 +74,8 @@
 					</table>
 				</div>
 			</div>
-			
-			
+
+
 			<div class="row">
 				<div class="col-md-7">
 					<table id="summer-activity-tleft" class="summer-activity-tleft">
@@ -90,7 +91,7 @@
 					</tbody>
 					</table>
 				</div>
-				
+
 				<div class="col-md-5">
 					<table class="summer-activity-tright">
 						<tr>
@@ -116,8 +117,8 @@
 					</table>
 				</div>
 			</div>
-			
-			
+
+
 			<div class="row summer-personal-spo">
 				<div class="col-md-7">
 					<div class="summer-activity-title" data-localize="summer.activity.personalSpon">Personal Sponsoring</div>
@@ -135,11 +136,11 @@
 							<td><span id="newCons500"></span></td>
 							<td><span id="businessBuilder"></span></td>
 						</tr>
-						
+
 					</tbody>
 					</table>
 				</div>
-				
+
 				<div class="col-md-5">
 					<table id="summer-activity-personal-tright" border="0px" class="summer-activity-personal-tright">
 						<thead>
@@ -153,7 +154,7 @@
 					</table>
 				</div>
 			</div>
-			
+
 			<div class="row">
 				<div class="col-md-6">
 					<a id="btn-amb" href="#" class="btn-common btn-details" data-localize="summer.activity.btnAmb">AMB Leader Tracking</a>
